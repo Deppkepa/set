@@ -182,7 +182,7 @@ pip install flask`
     "score": 0
 }
 ```
-Статус может быть ongoing или ended
+Статус может быть `ongoing` или `ended`
 
 ### Выбрать
 `/set/pick`
