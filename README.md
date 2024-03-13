@@ -28,60 +28,76 @@ pip install flask`
 `/user/register`
 
 Запрос
-`{
+```
+{
     "nickname":"user-test",
     "password":"user123"
-}`
+}
+```
 Ответ
-`{
+```
+{
     "nickname": "user-test",
     "accessToken": "f872a167c9b0"
-}`
+}
+```
 
 ### Игра
 Создать
 `/set/room/create`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0"
-}`
+}
+```
 Ответ
-`{
+```
+{
     "success": true,
     "exception": null,
     "gameId": 0
-}`
+}
+```
 ### Список игр
 `/set/room/list`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0"
-}`
+}
+```
 Ответ
-`{
+```
+{
     "games": [
         {
             "id": 1
         }
     ]
-}`
+}
+```
 
 ### Войти в игру
 `/set/room/enter`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0",
     "gameId": 1
-}`
+}
+```
 Ответ
-`{
+```
+{
     "success": true,
     "exception": null,
     "gameId": 1
-}`
+}
+```
 
 ## Когда пользователь находится в игре
 
@@ -89,11 +105,14 @@ pip install flask`
 `/set/field`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0"
-}`
+}
+```
 Ответ
-`{
+```
+{
     "cards": [
         {
             "id": 6,
@@ -161,24 +180,29 @@ pip install flask`
     ],
     "status": "ongoing",
     "score": 0
-}`
+}
+```
 Статус может быть ongoing или ended
 
 ### Выбрать
 `/set/pick`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0",
     "cards":[
         5, 10, 25
     ]
-}`
+}
+```
 Ответ
-`{
+```
+{
     "isSet": false,
     "score": 0
-}`
+}
+```
 
 ### Добавить
 Добавить карты на поле
@@ -186,14 +210,18 @@ pip install flask`
 `/set/add`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0",
-}`
+}
+```
 Ответ
-`{
+```
+{
     "success": true,
     "exception": null
-}`
+}
+```
 
 ### Баллы
 Добавить карты на поле
@@ -201,11 +229,14 @@ pip install flask`
 `/set/scores`
 
 Запрос
-`{
+```
+{
     "accessToken":"f872a167c9b0",
-}`
+}
+```
 Ответ
-`{
+```
+{
     "success": true,
     "exception": null,
     "users": [
@@ -218,11 +249,13 @@ pip install flask`
             "score": 0
         }
     ]
-}`
+}
+```
 ## Как пользоватся программаой для поиска сета?
 Этот код работает вне сервера. Просто небольшая помощь, когда вы не можете найти сет.
 1. Копируете поле и вставляете в файл `cards2.json`.Незабудь потом сохранить файл с изменениями. Например
-`{
+```
+{
     "cards": [
         {
             "id": 6,
@@ -290,5 +323,6 @@ pip install flask`
     ],
     "status": "ongoing",
     "score": 0
-}`
+}
+```
 2. дальше запускаете код в файле `main.py` из директории `searchSet`.
