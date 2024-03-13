@@ -12,85 +12,86 @@
 ## Установка зависимостей
 Запустить консоль. Перейти в папку проекта. При необходимости прописать полный путь (`cd D:/.../.../Папка_Проекта`)
 
-cd Папка_Проекта
-pip install flask
+`cd <Папка_Проекта>
+pip install flask`
 
 ## Использование
 Запуск приложения осуществляется также в консоли
-python main_server.py
-После чего Вы можете отправлять запросы на локальный адрес http://127.0.0.1:5000/ Например:
+`python main_server.py`
+После чего Вы можете отправлять запросы на локальный адрес http://127.0.0.1:5000/ 
+Например:
 по адресу http://127.0.0.1:5000/user/register
 
 ## Взаимодействие с сервером
 
 ### Регистрация
-/user/register
+`/user/register`
 
 Запрос
-{
+`{
     "nickname":"user-test",
     "password":"user123"
-}
+}`
 Ответ
-{
+`{
     "nickname": "user-test",
     "accessToken": "f872a167c9b0"
-}
+}`
 
 ### Игра
 Создать
-/set/room/create
+`/set/room/create`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0"
-}
+}`
 Ответ
-{
+`{
     "success": true,
     "exception": null,
     "gameId": 0
-}
+}`
 ### Список игр
-/set/room/list
+`/set/room/list`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0"
-}
+}`
 Ответ
-{
+`{
     "games": [
         {
             "id": 1
         }
     ]
-}
+}`
 
 ### Войти в игру
-/set/room/enter
+`/set/room/enter`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0",
     "gameId": 1
-}
+}`
 Ответ
-{
+`{
     "success": true,
     "exception": null,
     "gameId": 1
-}
+}`
 
 ## Когда пользователь находится в игре
 
 ### Поле
-/set/field
+`/set/field`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0"
-}
+}`
 Ответ
 `{
     "cards": [
@@ -164,47 +165,47 @@ python main_server.py
 Статус может быть ongoing или ended
 
 ### Выбрать
-/set/pick
+`/set/pick`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0",
     "cards":[
         5, 10, 25
     ]
-}
+}`
 Ответ
-{
+`{
     "isSet": false,
     "score": 0
-}
+}`
 
 ### Добавить
 Добавить карты на поле
 
-/set/add
+`/set/add`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0",
-}
+}`
 Ответ
-{
+`{
     "success": true,
     "exception": null
-}
+}`
 
 ### Баллы
 Добавить карты на поле
 
-/set/scores
+`/set/scores`
 
 Запрос
-{
+`{
     "accessToken":"f872a167c9b0",
-}
+}`
 Ответ
-{
+`{
     "success": true,
     "exception": null,
     "users": [
@@ -217,11 +218,11 @@ python main_server.py
             "score": 0
         }
     ]
-}
+}`
 ## Как пользоватся программаой для поиска сета?
 Этот код работает вне сервера. Просто небольшая помощь, когда вы не можете найти сет.
-1. Копируете поле и вставляете в файл cards2.json.Незабудь потом сохранить файл с изменениями. Например
-{
+1. Копируете поле и вставляете в файл `cards2.json`.Незабудь потом сохранить файл с изменениями. Например
+`{
     "cards": [
         {
             "id": 6,
@@ -289,5 +290,5 @@ python main_server.py
     ],
     "status": "ongoing",
     "score": 0
-}
-2. дальше запускаете код
+}`
+2. дальше запускаете код в файле `main.py` из директории `searchSet`.
