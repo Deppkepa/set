@@ -1,0 +1,69 @@
+{
+    "cards": [
+        {
+            "color": 3,
+            "count": 1,
+            "fill": 2,
+            "id": 67,
+            "shape": 2
+        },
+        {
+            "color": 3,
+            "count": 3,
+            "fill": 2,
+            "id": 69,
+            "shape": 2
+        },
+        {
+            "color": 3,
+            "count": 3,
+            "fill": 2,
+            "id": 60,
+            "shape": 1
+        },
+        {
+            "color": 1,
+            "count": 1,
+            "fill": 2,
+            "id": 13,
+            "shape": 2
+        },
+        {
+            "color": 1,
+            "count": 3,
+            "fill": 1,
+            "id": 12,
+            "shape": 2
+        },
+        {
+            "color": 2,
+            "count": 2,
+            "fill": 1,
+            "id": 47,
+            "shape": 3
+        },
+        {
+            "color": 3,
+            "count": 1,
+            "fill": 1,
+            "id": 73,
+            "shape": 3
+        },
+        {
+            "color": 3,
+            "count": 1,
+            "fill": 3,
+            "id": 70,
+            "shape": 2
+        },
+        {
+            "color": 2,
+            "count": 1,
+            "fill": 3,
+            "id": 34,
+            "shape": 1
+        }
+    ],
+    "exception": "null",
+    "success": "true"
+}
